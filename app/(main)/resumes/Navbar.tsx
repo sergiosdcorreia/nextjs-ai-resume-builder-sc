@@ -1,7 +1,3 @@
-import React from "react";
-
-type Props = {};
-
-export default function Navbar({}: Props) {
+export default function Navbar() {
   return <header>Navbar</header>;
 }
