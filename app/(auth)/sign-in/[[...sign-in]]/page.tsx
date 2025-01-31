@@ -1,9 +1,7 @@
 import { SignIn } from "@clerk/nextjs";
 import React from "react";
 
-type Props = {};
-
-export default function Page({}: Props) {
+export default function Page() {
   return (
     <main className="flex h-dvh items-center justify-center p-3">
       <SignIn />
