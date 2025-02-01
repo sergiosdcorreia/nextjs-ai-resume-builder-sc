@@ -7,7 +7,7 @@ type Props = {
 
 export default function layout({ children }: Props) {
   return (
-    <div>
+    <div className="flex min-h-screen flex-col">
       <Navbar />
       {children}
     </div>
