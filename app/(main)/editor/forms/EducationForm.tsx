@@ -39,40 +39,40 @@ export default function EducationForm({
   });
 
   return (
-    <FormProvider {...form}>
-      <div className="mx-auto max-w-xl space-y-6">
-        <div className="space-y-1.5 text-center">
-          <h2 className="text-2xl font-semibold">Education</h2>
-          <p className="text-sm text-muted-foreground">
-            Add as many educations as you like.
-          </p>
-        </div>
+    <div className="mx-auto max-w-xl space-y-6">
+      <div className="space-y-1.5 text-center">
+        <h2 className="text-2xl font-semibold">Education</h2>
+        <p className="text-sm text-muted-foreground">
+          Add as many educations as you like.
+        </p>
       </div>
-      <div className="space-y-3">
-        {fields.map((field, index) => (
-          <EducationItem
-            key={field.id}
-            index={index}
-            form={form}
-            remove={remove}
-          />
-        ))}
-        <div className="flex justify-center">
-          <Button
-            type="button"
-            onClick={() =>
-              append({
-                degree: "",
-                school: "",
-                startDate: "",
-                endDate: "",
-              })
-            }
-          >
-            Add education
-          </Button>
+      <FormProvider {...form}>
+        <div className="space-y-3">
+          {fields.map((field, index) => (
+            <EducationItem
+              key={field.id}
+              index={index}
+              form={form}
+              remove={remove}
+            />
+          ))}
+          <div className="flex justify-center">
+            <Button
+              type="button"
+              onClick={() =>
+                append({
+                  degree: "",
+                  school: "",
+                  startDate: "",
+                  endDate: "",
+                })
+              }
+            >
+              Add education
+            </Button>
+          </div>
         </div>
-      </div>
-    </FormProvider>
+      </FormProvider>
+    </div>
   );
 }

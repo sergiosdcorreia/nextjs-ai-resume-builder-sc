@@ -39,14 +39,14 @@ export default function GeneralInfoForm({
   }, [form, resumeData, setResumeData]);
 
   return (
-    <FormProvider {...form}>
-      <div className="mx-auto max-w-xl space-y-6">
-        <div className="space-y-1.5 text-center">
-          <h2 className="text-2xl font-semibold">General info</h2>
-          <p className="text-sm text-muted-foreground">
-            This will not appear on your resume
-          </p>
-        </div>
+    <div className="mx-auto max-w-xl space-y-6">
+      <div className="space-y-1.5 text-center">
+        <h2 className="text-2xl font-semibold">General info</h2>
+        <p className="text-sm text-muted-foreground">
+          This will not appear on your resume
+        </p>
+      </div>
+      <FormProvider {...form}>
         <div className="space-y-3">
           <FormField
             control={form.control}
@@ -77,7 +77,7 @@ export default function GeneralInfoForm({
             )}
           />
         </div>
-      </div>
-    </FormProvider>
+      </FormProvider>
+    </div>
   );
 }

@@ -42,41 +42,41 @@ export default function WorkExperienceForm({
   });
 
   return (
-    <FormProvider {...form}>
-      <div className="mx-auto max-w-xl space-y-6">
-        <div className="space-y-1.5 text-center">
-          <h2 className="text-2xl font-semibold">Work experience</h2>
-          <p className="text-sm text-muted-foreground">
-            Add as many work experiences as you like.
-          </p>
-        </div>
+    <div className="mx-auto max-w-xl space-y-6">
+      <div className="space-y-1.5 text-center">
+        <h2 className="text-2xl font-semibold">Work experience</h2>
+        <p className="text-sm text-muted-foreground">
+          Add as many work experiences as you like.
+        </p>
       </div>
-      <div className="space-y-3">
-        {fields.map((field, index) => (
-          <WorkExperienceItem
-            key={field.id}
-            index={index}
-            form={form}
-            remove={remove}
-          />
-        ))}
-        <div className="flex justify-center">
-          <Button
-            type="button"
-            onClick={() =>
-              append({
-                position: "",
-                company: "",
-                startDate: "",
-                endDate: "",
-                description: "",
-              })
-            }
-          >
-            Add work experience
-          </Button>
+      <FormProvider {...form}>
+        <div className="space-y-3">
+          {fields.map((field, index) => (
+            <WorkExperienceItem
+              key={field.id}
+              index={index}
+              form={form}
+              remove={remove}
+            />
+          ))}
+          <div className="flex justify-center">
+            <Button
+              type="button"
+              onClick={() =>
+                append({
+                  position: "",
+                  company: "",
+                  startDate: "",
+                  endDate: "",
+                  description: "",
+                })
+              }
+            >
+              Add work experience
+            </Button>
+          </div>
         </div>
-      </div>
-    </FormProvider>
+      </FormProvider>
+    </div>
   );
 }
