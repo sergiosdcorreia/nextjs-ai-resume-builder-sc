@@ -2,7 +2,7 @@
 
 import { useSearchParams } from "next/navigation";
 import { steps } from "./steps";
-import Breadcrumbs from "./Breadcrumbs";
+import Breadcrumbs from "../../../components/editor/Breadcrumbs";
 import Footer from "./Footer";
 import { useState } from "react";
 import { ResumeValues } from "@/lib/validation";
