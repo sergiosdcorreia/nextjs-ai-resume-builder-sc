@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { ResumeValues } from "@/lib/validation";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { resumeSchema } from "../lib/validation";
 
 interface ResumePreviewProps {
   resumeData: ResumeValues;
@@ -31,6 +32,7 @@ export default function ResumePreview({
         }}
       >
         <PersonalInfoHeader resumeData={resumeData} />
+        <SummarySection resumeData={resumeData} />
       </div>
     </div>
   );
@@ -41,7 +43,8 @@ interface ResumeSectionProps {
 }
 
 function PersonalInfoHeader({ resumeData }: ResumeSectionProps) {
-  const { photo, firstName, lastName, jobTitle } = resumeData;
+  const { photo, firstName, lastName, jobTitle, city, country, phone, email } =
+    resumeData;
 
   const [photoSrc, setPhotoSrc] = useState(photo instanceof File ? "" : photo);
 
@@ -71,7 +74,30 @@ function PersonalInfoHeader({ resumeData }: ResumeSectionProps) {
           </p>
           <p className="font-medium">{jobTitle}</p>
         </div>
+        <p className="text-xs text-gray-500">
+          {city}
+          {city && country ? ", " : ""}
+          {country}
+          {(city || country) && (phone || email) ? " | " : ""}
+          {[phone, email].filter(Boolean).join(" | ")}
+        </p>
       </div>
     </div>
+  );
+}
+
+function SummarySection({ resumeData }: ResumeSectionProps) {
+  const { summary } = resumeData;
+
+  if (!summary) return null;
+
+  return (
+    <>
+      <hr className="border-2" />
+      <div className="break-inside-avoid space-y-3">
+        <p className="text-lg font-semibold">Professional profile</p>
+        <div className="whitespace-pre-line text-sm">{summary}</div>
+      </div>
+    </>
   );
 }
