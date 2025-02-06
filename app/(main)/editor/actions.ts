@@ -51,38 +51,40 @@ export async function saveResume(values: ResumeValues) {
 
   // Save in database
   if (id) {
-    return prisma.resume.update({
-      where: { id },
-      data: {
-        ...ResumeValues,
-        photoUrl: newPhotoUrl,
-        workExperiences: {
-          deleteMany: {},
-          create: workExperiences?.map((experience) => ({
-            ...experience,
-            startDate: experience.startDate
-              ? new Date(experience.startDate)
-              : undefined,
-            endDate: experience.endDate
-              ? new Date(experience.endDate)
-              : undefined,
-          })),
+    return (
+      prisma.resume.update({
+        where: { id },
+        data: {
+          ...ResumeValues,
+          photoUrl: newPhotoUrl,
+          workExperiences: {
+            deleteMany: {},
+            create: workExperiences?.map((experience) => ({
+              ...experience,
+              startDate: experience.startDate
+                ? new Date(experience.startDate)
+                : undefined,
+              endDate: experience.endDate
+                ? new Date(experience.endDate)
+                : undefined,
+            })),
+          },
+          educations: {
+            deleteMany: {},
+            create: educations?.map((education) => ({
+              ...education,
+              startDate: education.startDate
+                ? new Date(education.startDate)
+                : undefined,
+              endDate: education.endDate
+                ? new Date(education.endDate)
+                : undefined,
+            })),
+          },
+          updatedAt: new Date(),
         },
-        educations: {
-          deleteMany: {},
-          create: workExperiences?.map((education) => ({
-            ...education,
-            startDate: education.startDate
-              ? new Date(education.startDate)
-              : undefined,
-            endDate: education.endDate
-              ? new Date(education.endDate)
-              : undefined,
-          })),
-        },
-        updatedAt: new Date(),
-      },
-    });
+      }) || []
+    );
   } else {
     return prisma.resume.create({
       data: {
@@ -101,15 +103,16 @@ export async function saveResume(values: ResumeValues) {
           })),
         },
         educations: {
-          create: workExperiences?.map((education) => ({
-            ...education,
-            startDate: education.startDate
-              ? new Date(education.startDate)
-              : undefined,
-            endDate: education.endDate
-              ? new Date(education.endDate)
-              : undefined,
-          })),
+          create:
+            educations?.map((education) => ({
+              ...education,
+              startDate: education.startDate
+                ? new Date(education.startDate)
+                : undefined,
+              endDate: education.endDate
+                ? new Date(education.endDate)
+                : undefined,
+            })) || [],
         },
       },
     });
