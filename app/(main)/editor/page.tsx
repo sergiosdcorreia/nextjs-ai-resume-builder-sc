@@ -7,7 +7,7 @@ import { auth } from "@clerk/nextjs/server";
 import { resumeDataInclude } from "@/lib/types";
 
 interface PageProps {
-  searchParams: Promise<{ resumeId?: string }>;
+  searchParams: { resumeId?: string };
 }
 
 export const metadata: Metadata = {
