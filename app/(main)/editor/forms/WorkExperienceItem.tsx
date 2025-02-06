@@ -16,6 +16,7 @@ import React from "react";
 import { UseFormReturn } from "react-hook-form";
 import { CSS } from "@dnd-kit/utilities";
 import { cn } from "@/lib/utils";
+import GenerateWorkExperienceButton from "./GenerateWorkExperienceButton";
 
 interface WorkExperienceItemProps {
   id: string;
@@ -57,6 +58,13 @@ export default function WorkExperienceItem({
           className="size-5 cursor-grab text-muted-foreground focus:outline-none"
           {...attributes}
           {...listeners}
+        />
+      </div>
+      <div className="flex justify-center">
+        <GenerateWorkExperienceButton
+          onWorkExperienceGenerated={(exp) =>
+            form.setValue(`workExperiences.${index}`, exp)
+          }
         />
       </div>
       <FormField
