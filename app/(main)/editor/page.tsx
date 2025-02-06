@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 export const dynamic = "force-dynamic";
 
 export default async function Page({ searchParams }: PageProps) {
-  const { resumeId } = await searchParams;
+  const { resumeId } = searchParams;
 
   const { userId } = await auth();
 
