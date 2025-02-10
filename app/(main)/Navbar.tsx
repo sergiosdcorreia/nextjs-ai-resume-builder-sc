@@ -16,7 +16,8 @@ export default function Navbar() {
     <header className="shadow-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 p-3">
         <Link href="/resumes" className="flex items-center gap-2">
-          Logo{" "}
+          {/* TODO: Add a logo */}
+          {/*Logo{" "} */}
           <span className="text-xl font-bold tracking-tight">
             AI Resume Builder
           </span>
