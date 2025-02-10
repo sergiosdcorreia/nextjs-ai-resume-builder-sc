@@ -7,6 +7,7 @@ import usePremiumModal from "@/hooks/usePremiumModal";
 import { useToast } from "@/hooks/use-toast";
 import { useState } from "react";
 import { createCheackoutSession } from "./actions";
+import { env } from "@/env";
 
 const premiumFeatures = ["AI tools", "Up to 3 resumes"];
 const premiumPlusFeatures = [
@@ -69,7 +70,7 @@ export default function PremiumModal() {
                 variant="secondary"
                 onClick={() =>
                   handlePremiumClick(
-                    process.env.NEXT_PUBLIC_STRIPE_PRICE_ID_PRO_3_MONTHS!,
+                    env.NEXT_PUBLIC_STRIPE_PRICE_ID_PRO_3_MONTHS,
                   )
                 }
                 disabled={loading}
@@ -94,7 +95,7 @@ export default function PremiumModal() {
                 variant="premium"
                 onClick={() =>
                   handlePremiumClick(
-                    process.env.NEXT_PUBLIC_STRIPE_PRICE_ID_PRO_PLUS_3_MONTHS!,
+                    env.NEXT_PUBLIC_STRIPE_PRICE_ID_PRO_PLUS_3_MONTHS,
                   )
                 }
                 disabled={loading}
