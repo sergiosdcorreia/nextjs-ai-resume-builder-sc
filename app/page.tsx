@@ -1,24 +1,33 @@
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="bg-gray-100px-5 flex min-h-dvh flex-col items-center justify-center gap-6 bg-gray-700 px-5 py-12 text-center text-gray-900 md:text-start lg:gap-12">
-      <div className="max-w-prose space-y-3 text-5xl font-semibold text-orange-500">
-        AI Resume Builder
-      </div>
-      <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight text-white lg:text-5xl">
-        Create a{" "}
-        <span className="inline-block bg-gradient-to-r from-green-600 to-green-400 bg-clip-text text-transparent">
-          Perfect Resume
-        </span>{" "}
-        in minutes
+    <main className="bg-gray-100px-5 relative flex min-h-dvh flex-col items-center justify-center gap-6 bg-slate-950 px-5 py-12 text-center text-gray-900 md:text-start lg:gap-12">
+      <Image
+        src="AILogo.svg"
+        alt=""
+        width={2000}
+        height={2000}
+        className="absolute -top-60 z-0 max-h-[125vh] opacity-5"
+      />
+      <Image
+        src="/AIResumeLogo.svg"
+        alt=""
+        width={160}
+        height={160}
+        className="z-10"
+      />
+      <h1 className="z-10 scroll-m-20 text-center text-4xl tracking-tight text-white lg:text-5xl">
+        Effortless resumes, built
+        <br /> professionally
       </h1>
-      <p className="text-lg text-gray-300">
-        The <span className="font-bold">AI Resume Builder</span> that helps you
-        design a professional resume.
+      <p className="z-10 text-center text-lg text-gray-300">
+        The AI features you need to take your resume from the basic
+        <br /> leagues to the big time.
       </p>
-      <Button asChild size="lg" variant="premium">
+      <Button asChild size="lg" variant="premium" className="z-10">
         <Link href="/resumes">Get started</Link>
       </Button>
     </main>

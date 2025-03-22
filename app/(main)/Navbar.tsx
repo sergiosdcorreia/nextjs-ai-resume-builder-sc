@@ -6,6 +6,7 @@ import { CreditCard } from "lucide-react";
 import Link from "next/link";
 import { dark } from "@clerk/themes";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
 export default function Navbar() {
   const { theme, systemTheme } = useTheme();
@@ -18,9 +19,13 @@ export default function Navbar() {
         <Link href="/resumes" className="flex items-center gap-2">
           {/* TODO: Add a logo */}
           {/*Logo{" "} */}
-          <span className="text-xl font-bold tracking-tight">
-            AI Resume Builder
-          </span>
+          <Image
+            src="/AIResumeLogo.svg"
+            alt=""
+            className="text-xl font-bold tracking-tight"
+            width={60}
+            height={60}
+          />
         </Link>
         <div className="flex items-center gap-3">
           <ThemeToggle />
