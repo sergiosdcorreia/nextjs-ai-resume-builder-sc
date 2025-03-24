@@ -87,3 +87,26 @@ body {
   size: A4;
   margin: 0.6cm;
 }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(3, 105, 161, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0369a1;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(3, 105, 161, 0.8);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
