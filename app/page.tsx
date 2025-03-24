@@ -17,7 +17,7 @@ export default function Home() {
         alt=""
         width={160}
         height={160}
-        className="z-10"
+        className="z-10 w-[20%] max-w-[160px]"
       />
       <h1 className="z-10 scroll-m-20 px-2 text-center text-4xl text-white lg:text-5xl">
         Effortless resumes, built professionally
@@ -33,13 +33,17 @@ export default function Home() {
       >
         <Link href="/resumes">Get started</Link>
       </Button>
-      <Image
-        src="/Screenshot.png"
-        alt=""
-        width={2000}
-        height={2000}
-        className="relative -top-12 md:-top-32 lg:-top-60 xl:-top-[360px]"
-      />
+      <div className="relative mx-4 my-8 w-[90%] md:mx-10 lg:mx-20">
+        <div className="absolute right-0 top-0 h-[60%] w-[60%] bg-[#0369A1] blur-[100px] md:blur-[200px] lg:blur-[400px]" />
+        <div className="absolute bottom-0 left-0 h-[60%] w-[60%] bg-[#0D9488] blur-[100px] md:blur-[200px] lg:blur-[400px]" />
+        <Image
+          src="/ScreenshotNoBG.png"
+          alt=""
+          width={2000}
+          height={2000}
+          className="relative z-10"
+        />
+      </div>
       <p className="py-4 text-sm text-gray-300">© Sergio Correia 2025</p>
     </main>
   );
