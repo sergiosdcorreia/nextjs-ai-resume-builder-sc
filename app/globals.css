@@ -94,7 +94,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(3, 105, 161, 0.1);
+  background: #020617;
 }
 
 ::-webkit-scrollbar-thumb {
