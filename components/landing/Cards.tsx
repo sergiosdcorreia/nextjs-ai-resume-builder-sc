@@ -16,7 +16,7 @@ export default function Cards() {
           <div className="relative z-10 mt-20 flex gap-2 text-lg text-gray-300">
             <Image src="check.svg" alt="" width={20} height={20} />1 resume
           </div>
-          <div className="relative z-10 mb-60 mt-2 flex gap-2 text-lg text-gray-300 opacity-0">
+          <div className="relative z-10 mb-24 mt-2 flex gap-2 text-lg text-gray-300 opacity-0 xl:mb-60">
             <Image src="check.svg" alt="" width={20} height={20} />1 resume
           </div>
           <div className="z-10 scroll-m-20 gap-2 text-center text-7xl font-bold text-gray-300">
@@ -41,7 +41,7 @@ export default function Cards() {
             <Image src="check.svg" alt="" width={20} height={20} />
             Infinite resume
           </div>
-          <div className="relative z-10 mb-60 mt-2 flex gap-2 text-lg text-gray-300">
+          <div className="relative z-10 mb-24 mt-2 flex gap-2 text-lg text-gray-300 xl:mb-60">
             <Image src="check.svg" alt="" width={20} height={20} />
             Custom design and themes
           </div>
@@ -65,7 +65,7 @@ export default function Cards() {
             <Image src="check.svg" alt="" width={20} height={20} />
             AI tools
           </div>
-          <div className="relative z-10 mb-60 mt-2 flex gap-2 text-lg text-gray-300">
+          <div className="relative z-10 mb-24 mt-2 flex gap-2 text-lg text-gray-300 xl:mb-60">
             <Image src="check.svg" alt="" width={20} height={20} />
             Up to 3 resumes
           </div>
