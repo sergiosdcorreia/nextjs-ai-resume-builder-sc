@@ -1,6 +1,5 @@
-import { Button } from "@/components/ui/button";
+import Hero from "@/components/Hero";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function Home() {
   return (
@@ -12,27 +11,7 @@ export default function Home() {
         height={2000}
         className="absolute -top-20 z-0 max-h-[125vh] opacity-5 lg:-top-60"
       />
-      <Image
-        src="/AIResumeLogo.svg"
-        alt=""
-        width={160}
-        height={160}
-        className="z-10 w-[20%] max-w-[160px]"
-      />
-      <h1 className="z-10 scroll-m-20 px-2 text-center text-4xl text-white lg:text-5xl">
-        Effortless resumes, built professionally
-      </h1>
-      <p className="z-10 px-2 text-center text-lg text-gray-300">
-        The AI features you need to take your resume from the basic leagues to
-        the big time.
-      </p>
-      <Button
-        asChild
-        size="lg"
-        className="z-10 rounded-full border border-slate-500/50 bg-slate-800/90 hover:bg-slate-500/90"
-      >
-        <Link href="/resumes">Get started</Link>
-      </Button>
+      <Hero />
       <div className="relative mx-auto my-8 w-[95vw] max-w-[2000px] lg:w-[90vw]">
         <div className="absolute right-0 top-0 h-[60%] w-[60%] bg-[#0369A1] blur-[100px] md:blur-[200px] lg:blur-[400px]" />
         <div className="absolute bottom-0 left-0 h-[60%] w-[60%] bg-[#0D9488] blur-[100px] md:blur-[200px] lg:blur-[400px]" />
@@ -44,6 +23,7 @@ export default function Home() {
           className="relative z-10"
         />
       </div>
+      <Hero />
       <p className="py-4 text-sm text-gray-300">© Sergio Correia 2025</p>
     </main>
   );
