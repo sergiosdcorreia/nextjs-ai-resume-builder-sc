@@ -24,7 +24,7 @@ export default function Home() {
           className="relative z-10"
         />
       </div>
-      <section>
+      <section className="w-full">
         <h2 className="z-10 mt-36 px-2 text-center text-4xl text-white lg:text-5xl">
           Upgrade your resume game
         </h2>

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Cards() {
   return (
-    <div className="mb-36 mt-20 grid w-full grid-cols-1 gap-16 p-2 xl:grid-cols-3">
+    <div className="mb-36 mt-20 grid w-full grid-cols-1 gap-16 p-2 xl:grid-cols-3 xl:p-10">
       <div className="mx-auto mt-10 w-full max-w-[500px] rounded-3xl border-[12px] border-white/20 bg-[#000A11] xl:mt-36">
         <div className="relative w-full overflow-hidden rounded-2xl bg-[#000A11] p-20">
           <div className="absolute -left-20 -top-40 h-[200%] w-[200%] opacity-5">
