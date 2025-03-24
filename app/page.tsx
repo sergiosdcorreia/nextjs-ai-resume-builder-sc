@@ -33,7 +33,7 @@ export default function Home() {
       >
         <Link href="/resumes">Get started</Link>
       </Button>
-      <div className="relative mx-4 my-8 w-[90%] md:mx-10 lg:mx-20">
+      <div className="relative mx-auto my-8 w-[95vw] max-w-[2000px] lg:w-[90vw]">
         <div className="absolute right-0 top-0 h-[60%] w-[60%] bg-[#0369A1] blur-[100px] md:blur-[200px] lg:blur-[400px]" />
         <div className="absolute bottom-0 left-0 h-[60%] w-[60%] bg-[#0D9488] blur-[100px] md:blur-[200px] lg:blur-[400px]" />
         <Image
