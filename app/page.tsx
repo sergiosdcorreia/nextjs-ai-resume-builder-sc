@@ -30,10 +30,11 @@ export default function Home() {
       scale: 0.8,
       opacity: 0,
       duration: 5,
+      delay: 0.2,
       ease: "back.out(1.7)",
       scrollTrigger: {
         trigger: screenshotRef.current,
-        start: "top 90%",
+        start: "top 99%",
         toggleActions: "play none none reverse",
       },
     });
@@ -77,7 +78,7 @@ export default function Home() {
     <main className="relative flex flex-col items-center justify-center gap-6 bg-slate-950 py-20 text-center text-gray-900 md:text-start lg:gap-12">
       <section
         ref={heroRef}
-        className="relative flex h-[70vh] flex-col items-center justify-center gap-6 lg:gap-12"
+        className="relative flex h-[90vh] flex-col items-center justify-center gap-6 lg:gap-12"
       >
         <Hero />
       </section>
