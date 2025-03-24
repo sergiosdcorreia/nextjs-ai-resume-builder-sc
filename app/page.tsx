@@ -1,9 +1,10 @@
-import Hero from "@/components/Hero";
+import Cards from "@/components/landing/Cards";
+import Hero from "@/components/landing/Hero";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="bg-gray-100px-5 relative flex min-h-dvh flex-col items-center justify-center gap-6 bg-slate-950 py-20 text-center text-gray-900 md:text-start lg:gap-12">
+    <main className="relative flex flex-col items-center justify-center gap-6 bg-slate-950 py-20 text-center text-gray-900 md:text-start lg:gap-12">
       <Image
         src="AILogo.svg"
         alt=""
@@ -23,7 +24,16 @@ export default function Home() {
           className="relative z-10"
         />
       </div>
-      <Hero />
+      <section>
+        <h2 className="z-10 mt-36 px-2 text-center text-4xl text-white lg:text-5xl">
+          Upgrade your resume game
+        </h2>
+        <Cards />
+      </section>
+      <section className="relative flex flex-col items-center justify-center gap-6 lg:gap-12">
+        <div className="absolute left-[50%] top-[50%] h-full w-full -translate-x-[50%] -translate-y-[50%] bg-[#0369A1] blur-[200px] lg:blur-[300px]" />
+        <Hero />
+      </section>
       <p className="py-4 text-sm text-gray-300">© Sergio Correia 2025</p>
     </main>
   );
