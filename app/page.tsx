@@ -78,8 +78,11 @@ export default function Home() {
     <main className="relative flex flex-col items-center justify-center gap-6 bg-slate-950 py-20 text-center text-gray-900 md:text-start lg:gap-12">
       <section
         ref={heroRef}
-        className="relative flex h-[90vh] flex-col items-center justify-center gap-6 lg:gap-12"
+        className="relative flex h-[100vh] w-full flex-col items-center justify-center gap-6 lg:gap-12"
       >
+        <div className="absolute -top-60 z-0 h-[150vh] w-full opacity-5">
+          <Image src="/AILogo.svg" alt="" fill className="object-cover" />
+        </div>
         <Hero />
       </section>
       <div className="relative mx-auto my-8 w-[95vw] max-w-[2000px] lg:w-[90vw]">
